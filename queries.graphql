@@ -1,0 +1,24 @@
+# the provided account details are to be used for testing purposes only
+query{
+  getBanks{
+    name,
+    code,
+    active
+  }
+}
+
+query{
+	getPreferedAccountName(bank_code:"232",account_number:"8375299077"){
+    status,
+    message,
+    accountName
+  }
+}
+
+
+mutation{
+  verifyAccount(user_bank_code:"232",user_account_number:"8375299077",user_account_name:"MONNIFY / John Doe"){
+    status,
+    message
+  }
+}
