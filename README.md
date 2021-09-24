@@ -1,7 +1,7 @@
 # Buycoins Backend Challange
 
 A live instance of the api is running at 
-`https://heroku.com`<br/>
+[heroku]https://buycoinz.herokuapp.com/graphql<br/>
 
 
 > What's a good reason why the pure Levenshtein Distance algorithm might be a more effective solution than t
