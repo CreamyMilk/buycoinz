@@ -8,9 +8,9 @@ import (
 )
 
 const (
-	foundPreferedName   = true
-	foundFromThirdParty = true
-	accountNameNotFound = false
+	foundPreferedName       = true
+	accountNameNotFound     = false
+	foundNameFromThirdParty = true
 )
 
 var (
@@ -23,6 +23,7 @@ type PreferedAccountNameRequest struct {
 	BankCode      string
 	AccountNumber string
 }
+
 type PreferedAccountNameResponse struct {
 	AccountName string
 	Message     string
@@ -37,6 +38,7 @@ func (req *PreferedAccountNameRequest) GetPreferedAccountName() (*PreferedAccoun
 	if req.BankCode == "" {
 		return nil, errorInvalidBankCode
 	}
+
 	resp := new(PreferedAccountNameResponse)
 	prefedName, found := storage.FakeStore[req.AccountNumber]
 	if found {
@@ -55,6 +57,6 @@ func (req *PreferedAccountNameRequest) GetPreferedAccountName() (*PreferedAccoun
 
 	resp.Message = "Successfully got default accountName"
 	resp.AccountName = details.Data.AccountName
-	resp.Status = foundFromThirdParty
+	resp.Status = foundNameFromThirdParty
 	return resp, nil
 }

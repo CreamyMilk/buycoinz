@@ -13,7 +13,7 @@ func TestToSentenceCase(t *testing.T) {
 		{"Single Letter LowerCase", "a", "A"},
 		{"Single Letter Upper Case", "B", "B"},
 		{"Single Word", "milk", "Milk"},
-		{"Long sentence Word", "this sentence is super long", "This Sentence Is Super Long"},
+		{"Long sentence", "this sentence is super long", "This Sentence Is Super Long"},
 		{"Special Characters", "*.<><><", "*.<><><"},
 	}
 

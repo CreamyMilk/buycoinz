@@ -1,8 +1,10 @@
 # Buycoins Backend Challange
 
-A live instance of the api is running at 
-[heroku]https://buycoinz.herokuapp.com/graphql<br/>
+A live instance of the API is running at 
+[heroku here](https://buycoinz.herokuapp.com/graphql)<br/>
 
+
+Instructions of how to run the project can be found [here](https://github.com/CreamyMilk/buycoinz/blob/main/HOW_TO_RUN.md)
 
 > What's a good reason why the pure Levenshtein Distance algorithm might be a more effective solution than t
 > Damerau–Levenshtein Distance algorithm in this specific scenario ?
@@ -25,10 +27,11 @@ Because each operation has a score as shown in the table
 > ``Transposition = Deletion + Insertion``
 
 
-Introduction of transpositions can lead to the creation of some non-gramatical matches
-that can arise in cases where two consecutive letters are swapped in
-a word examples of such cases can be viewed below
+Introduction of transpositions can lead to the creation of some non-gramatical matches.<br/>
+Such matches can arise in cases where two consecutive characters are swapped in
+a word.<br/>
 
+A few notable examples of such cases can be viewed in the table below
 
 ##### Minor Examples
 
@@ -41,22 +44,21 @@ a word examples of such cases can be viewed below
 |Bitcoin   | Bictoi          | 2                         | 3                      |
 |ABCDEF    | ABDCFE          | 2                         | 3                      |
 
-> *The values where obtained using this custom program that can be found [here](https://gist.github.com/CreamyMilk/d3cf06bc380411e1ab8fd87cd425c25b)*
+> *The values where obtained using a custom program that can be found [here](https://gist.github.com/CreamyMilk/d3cf06bc380411e1ab8fd87cd425c25b)*
 
 
-<br />
+<br/>
 
-With a threshold of  ` (2) ` used to qualify a valid match.
-Its quite observable that using Damerau-Levenshtein to match account names is not quite appropriate in this case
-as compared to Levenshtein algrothim which maintains an appropriate score to organic results .
-
+With a threshold score of `(2)` used to qualify a valid match.
+It's quite observable that using Damerau-Levenshtein score to match account names 
+is not quite appropriate in this case as compared to Levenshtein algrothim
+which maintains an appropriate score to organic results.
 
 >Damarau-Levenshtein algorithim also introduces an extra compartive check for cases where transpoition is to be applied
 >but it has a negligeble effect on the efficieny of execution of the algorithim
 
 
-
-<br />
-<br />
-<br />
+<br/>
+<br/>
+<br/>
 ✌️ Was Quite fun 

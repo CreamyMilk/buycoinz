@@ -3,31 +3,32 @@
 git clone https://github.com/CreamyMilk/buycoinz.git
 ```
 
-2. Copy .env.sample as .env & update the environment variable 
+2. Make a copy  of `.env.sample` then rename it to `.env` & update the environment variables
 ```bash
 cp .env.sample .env
 ```
 
-3. Run the app using 
+3. Run the app using
+
 ```bash
 go run main.go
 ```
 
 
-#### Environment Varibles
+#### Environment Variables Descriptions
 <pre>
 * ENV  - The current deployment mode ("staging",production)
-* PORT - port to run the server
-* PAYSTACK_PROD_KEY - A valid paystack production api key
-* PAYSTACK_TEST_KEY - A valid paustack test api key 
+* PORT - port to run the server on
+* PAYSTACK_PROD_KEY - A valid paystack production API key
+* PAYSTACK_TEST_KEY - A valid paystack Test API key 
 </pre>
 
-#### Testing Enironment varibles
+#### Testing Environment variables
 <pre>
 * TEST_BANKCODE   - A legitimate Bank code 
 * TEST_ACCOUNTNO  - A legitimate accountNo 
 * TEST_VALID_ACCOUNT_NAME    - The actual account name that corresponds with the mentioned (AccoutNo,BankCode) pair
-* TEST_PREFERED_ACCOUNT_NAME - User specied Custom name to be persited for testing purposes
+* TEST_PREFERED_ACCOUNT_NAME - User specified Custom name to be persited for testing purposes
 </pre>
 
 
@@ -42,12 +43,17 @@ go test -v ./utils/
 
 
 ### Assumptions Made
-* Account Number can vary in length and the can contain leading zeros hene accounts like (00123) and( 123 ) are diffent numbers
-* All account number are unique in respective of the bank of origin
-* Aspects like authroization ,rate-limiting and CSRF are beyond the scope of the task
+* Account Numbers can vary in length and they can contain leading zeros hence 
+accounts like (001230) and( 1230 ) are different.
+* All account number are unique irrespective of the bank of origin
+* Aspects like authorization ,rate-limiting and CSRF are beyond the scope of the task
+* Authentication and user management was beyound the scope iof the task.
 
+<br />
 
-### Why we don't use an actual DB 
->  I resorted to using an in memory hash map to store the prefered  
->  account name details as inclusion of a database would have been beyond the 
->  scope of the task
+#### Why I don't use an actual DB for my implmentation
+> I resorted to using an in memory hash map to store the prefered  
+> account name.
+> The inclusion of a database would have been beyond the 
+> scope of the task due to the creation of a user model and 
+> creation of a mock database to run my tests.
