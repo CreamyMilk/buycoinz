@@ -1,4 +1,4 @@
-# Buycoins Backend Challange
+# Buycoins Backend Challenge
 
 A live instance of the API is running at 
 [heroku here](https://buycoinz.herokuapp.com/graphql)<br/>
